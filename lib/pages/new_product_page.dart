@@ -274,10 +274,8 @@ class _NewProductPageState extends State<NewProductPage> {
   }
 
 
-
-
   void checkConnectionResult(ConnectivityResult result) {
-     if(result != ConnectivityResult.mobile || result != ConnectivityResult.wifi){
+     if(result == ConnectivityResult.mobile || result == ConnectivityResult.wifi){
       setState(() {
         isConnected = true;
       });
